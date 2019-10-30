@@ -4,7 +4,7 @@ navbar:
   title: "Home"
   right:
     - text: "Blog"
-      href: Blog.html
+      href: blog.html
     - icon: fa-envelope fa-lg
       href: mailto:<mgm4002@med.cornell.edu>
     - icon: fa-github fa-lg
