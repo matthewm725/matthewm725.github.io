@@ -6,7 +6,7 @@ title: "Matthew Mandeli"
 About Me
 
 <link rel="stylesheet" href="styles.css" type="text/css">
-<img src= "photow.jpg" style="width:15%; border:5px solid; margin-right; 20px" align="left">
+<img src= "photow.jpg" style="width:25%; border:5px solid; margin-right; 20px" align="bottom">
 
 
-I am a recent 2019 graduate of Cornell University with a degree in Biology. Currently I am studying for a Master’s Degree in Biostatistics and Data Science at Weill Cornell Graduate School in New York City. My resume is available here.
+I am a recent 2019 graduate of Cornell University with a degree in Biology. Currently I am studying for a Master’s Degree in Biostatistics and Data Science at Weill Cornell Graduate School in New York City. My resume is available [here](Matthew Mandeli Resume for CDEV.pdf).
