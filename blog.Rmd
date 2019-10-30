@@ -1,0 +1,85 @@
+---
+title: "Blog"
+---
+
+### Here is my Blog on Statistics and Programing 
+
+Today I would like to talk a little about the tidyverse in R. Let’s begin with a brief background of the tidyverse. 
+The tidyverse is a series of packages that work collaboratively in R and these packages were created by statistician Hadley Wickham. Some of the packages included in the tidyverse are plyr, dplyr, and ggplot2. 
+These are some of the most commonly used packages in R and often programing in the tidyverse is looked at as to be simpiler and more logical that programing in base R. 
+
+In this particular blog post I would like to focus on the dplyr package. I will be providing a brief introduction on the use of this package and it corresponding functions. 
+
+This package is used to move around and wrangle data. In simple terms it allows one to pull out meaning information by cutting out information in a large dataset. There are considered to be a few different main functions to the dplyr package. These would be select(), filter(), mutate(), arrange(), and summarise(). 
+
+select() is used to select particular columns in a table.
+
+filter() is used to select particular rows in a table.
+
+mutate() is used to create or modify a variable. 
+
+arrange() is used to sort the table by rows.
+
+summarise() is used to aggregate the data across the rows.
+
+Before we get into the use of these useful functions we must first talk about the pipe. As these functions are often used a lot with the pipe operator, %>%. The pipe is often used when there are many functions nested. It basically takes what is in the right side of the function what’s in the parenthesis and puts it on the left.
+
+For example,
+
+```{r}
+library(tidyverse)
+library(dplyr)
+```
+
+
+```{r}
+mean(1:10)
+```
+is the same as doing this
+```{r}
+1:10 %>% mean()
+```
+
+In order to explain the use of the dplyr functions let's look at an example.
+```{r}
+library(nycflights13)
+
+```
+
+```{r}
+head(flights)
+```
+Suppose we were interested in finding the destination for the longest United Airlines flight from JFK.
+
+First let's select the columns of interest
+```{r}
+flights%>%
+  select(carrier, origin, dest, air_time)
+```
+Now let's look only at United Airlines flights
+```{r}
+flights%>%
+  select(carrier, origin, dest, air_time)%>%
+  filter(carrier == "UA")
+```
+
+Now let's look only at United Airlines flights leaving from JFK
+
+
+```{r}
+flights%>%
+  select(carrier, origin, dest, air_time)%>%
+  filter(carrier == "UA" & origin == "JFK")
+```
+
+Now let's arrange the data by air time in descending order
+```{r}
+flights%>%
+  select(carrier, origin, dest, air_time)%>%
+  filter(carrier == "UA" & origin == "JFK")%>%
+  arrange(desc(air_time))
+  
+```
+Here we can see the longest United Airlines flight from JFK is to San Francisco.
+
+Hopefully this post helped you better understand the power of the dplyr package and it's corresponding functions in R. All of the above information was learned at Weill Cornell Medical College in the courses Data Science I and Biostatistics I.

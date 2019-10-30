@@ -1,13 +1,17 @@
-name: "Yay internet!"
+name: "Matthew Mandeli"
 output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "About"
-      href: about.html
+    - text: "Blog"
+      href: Blog.html
     - icon: fa-envelope fa-lg
-      href: mailto:<you@youremail.com>
+      href: mailto:<mgm4002@med.cornell.edu>
     - icon: fa-github fa-lg
-      href: http://github.com/<YOUR_GH_NAME>/
+      href: https://github.com/matthewm725
+    - icon: fa-twitter fa-lg
+      href: https://twitter.com/MandeliMatthew
+    - icon: fa-linkedin fa-lg
+    - href: https://www.linkedin.com/in/matthew-mandeli-074192133
 output:
   html_document

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Blog</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="Blog.html">Blog</a>
+</li>
+<li>
+  <a href="mailto:&lt;mgm4002@med.cornell.edu&gt;">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/matthewm725">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/MandeliMatthew">
+    <span class="fa fa-twitter fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a>
+    <span class="fa fa-linkedin fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://www.linkedin.com/in/matthew-mandeli-074192133"></a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Blog</h1>
+
+</div>
+
+
+<div id="here-is-my-blog-on-statistics-and-programing" class="section level3">
+<h3>Here is my Blog on Statistics and Programing</h3>
+<p>Today I would like to talk a little about the tidyverse in R. Let’s begin with a brief background of the tidyverse. The tidyverse is a series of packages that work collaboratively in R and these packages were created by statistician Hadley Wickham. Some of the packages included in the tidyverse are plyr, dplyr, and ggplot2. These are some of the most commonly used packages in R and often programing in the tidyverse is looked at as to be simpiler and more logical that programing in base R.</p>
+<p>In this particular blog post I would like to focus on the dplyr package. I will be providing a brief introduction on the use of this package and it corresponding functions.</p>
+<p>This package is used to move around and wrangle data. In simple terms it allows one to pull out meaning information by cutting out information in a large dataset. There are considered to be a few different main functions to the dplyr package. These would be select(), filter(), mutate(), arrange(), and summarise().</p>
+<p>select() is used to select particular columns in a table.</p>
+<p>filter() is used to select particular rows in a table.</p>
+<p>mutate() is used to create or modify a variable.</p>
+<p>arrange() is used to sort the table by rows.</p>
+<p>summarise() is used to aggregate the data across the rows.</p>
+<p>Before we get into the use of these useful functions we must first talk about the pipe. As these functions are often used a lot with the pipe operator, %&gt;%. The pipe is often used when there are many functions nested. It basically takes what is in the right side of the function what’s in the parenthesis and puts it on the left.</p>
+<p>For example,</p>
+<pre class="r"><code>library(tidyverse)</code></pre>
+<pre><code>## ── Attaching packages ─────────────────</code></pre>
+<pre><code>## ✔ ggplot2 3.2.1     ✔ purrr   0.3.1
+## ✔ tibble  2.1.3     ✔ dplyr   0.8.3
+## ✔ tidyr   1.0.0     ✔ stringr 1.4.0
+## ✔ readr   1.3.1     ✔ forcats 0.4.0</code></pre>
+<pre><code>## Warning: package &#39;ggplot2&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## Warning: package &#39;tibble&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## Warning: package &#39;tidyr&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## Warning: package &#39;purrr&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## Warning: package &#39;dplyr&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## Warning: package &#39;stringr&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## Warning: package &#39;forcats&#39; was built under R version 3.5.2</code></pre>
+<pre><code>## ── Conflicts ──────────────────────────
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code>library(dplyr)</code></pre>
+<pre class="r"><code>mean(1:10)</code></pre>
+<pre><code>## [1] 5.5</code></pre>
+<p>is the same as doing this</p>
+<pre class="r"><code>1:10 %&gt;% mean()</code></pre>
+<pre><code>## [1] 5.5</code></pre>
+<p>In order to explain the use of the dplyr functions let’s look at an example.</p>
+<pre class="r"><code>library(nycflights13)</code></pre>
+<pre><code>## Warning: package &#39;nycflights13&#39; was built under R version 3.5.2</code></pre>
+<pre class="r"><code>head(flights)</code></pre>
+<pre><code>## # A tibble: 6 x 19
+##    year month   day dep_time sched_dep_time dep_delay arr_time
+##   &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;
+## 1  2013     1     1      517            515         2      830
+## 2  2013     1     1      533            529         4      850
+## 3  2013     1     1      542            540         2      923
+## 4  2013     1     1      544            545        -1     1004
+## 5  2013     1     1      554            600        -6      812
+## 6  2013     1     1      554            558        -4      740
+## # … with 12 more variables: sched_arr_time &lt;int&gt;, arr_delay &lt;dbl&gt;,
+## #   carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,
+## #   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;,
+## #   time_hour &lt;dttm&gt;</code></pre>
+<p>Suppose we were interested in finding the destination for the longest United Airlines flight from JFK.</p>
+<p>First let’s select the columns of interest</p>
+<pre class="r"><code>flights%&gt;%
+  select(carrier, origin, dest, air_time)</code></pre>
+<pre><code>## # A tibble: 336,776 x 4
+##    carrier origin dest  air_time
+##    &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;    &lt;dbl&gt;
+##  1 UA      EWR    IAH        227
+##  2 UA      LGA    IAH        227
+##  3 AA      JFK    MIA        160
+##  4 B6      JFK    BQN        183
+##  5 DL      LGA    ATL        116
+##  6 UA      EWR    ORD        150
+##  7 B6      EWR    FLL        158
+##  8 EV      LGA    IAD         53
+##  9 B6      JFK    MCO        140
+## 10 AA      LGA    ORD        138
+## # … with 336,766 more rows</code></pre>
+<p>Now let’s look only at United Airlines flights</p>
+<pre class="r"><code>flights%&gt;%
+  select(carrier, origin, dest, air_time)%&gt;%
+  filter(carrier == &quot;UA&quot;)</code></pre>
+<pre><code>## # A tibble: 58,665 x 4
+##    carrier origin dest  air_time
+##    &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;    &lt;dbl&gt;
+##  1 UA      EWR    IAH        227
+##  2 UA      LGA    IAH        227
+##  3 UA      EWR    ORD        150
+##  4 UA      JFK    LAX        345
+##  5 UA      EWR    SFO        361
+##  6 UA      EWR    LAS        337
+##  7 UA      EWR    MIA        157
+##  8 UA      JFK    SFO        366
+##  9 UA      LGA    IAH        229
+## 10 UA      EWR    LAX        366
+## # … with 58,655 more rows</code></pre>
+<p>Now let’s look only at United Airlines flights leaving from JFK</p>
+<pre class="r"><code>flights%&gt;%
+  select(carrier, origin, dest, air_time)%&gt;%
+  filter(carrier == &quot;UA&quot; &amp; origin == &quot;JFK&quot;)</code></pre>
+<pre><code>## # A tibble: 4,534 x 4
+##    carrier origin dest  air_time
+##    &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;    &lt;dbl&gt;
+##  1 UA      JFK    LAX        345
+##  2 UA      JFK    SFO        366
+##  3 UA      JFK    SFO        369
+##  4 UA      JFK    LAX        360
+##  5 UA      JFK    SFO        364
+##  6 UA      JFK    LAX        357
+##  7 UA      JFK    SFO        362
+##  8 UA      JFK    LAX        356
+##  9 UA      JFK    SFO        347
+## 10 UA      JFK    LAX        345
+## # … with 4,524 more rows</code></pre>
+<p>Now let’s arrange the data by air time in descending order</p>
+<pre class="r"><code>flights%&gt;%
+  select(carrier, origin, dest, air_time)%&gt;%
+  filter(carrier == &quot;UA&quot; &amp; origin == &quot;JFK&quot;)%&gt;%
+  arrange(desc(air_time))</code></pre>
+<pre><code>## # A tibble: 4,534 x 4
+##    carrier origin dest  air_time
+##    &lt;chr&gt;   &lt;chr&gt;  &lt;chr&gt;    &lt;dbl&gt;
+##  1 UA      JFK    SFO        421
+##  2 UA      JFK    SFO        411
+##  3 UA      JFK    SFO        406
+##  4 UA      JFK    SFO        405
+##  5 UA      JFK    SFO        397
+##  6 UA      JFK    SFO        397
+##  7 UA      JFK    SFO        396
+##  8 UA      JFK    SFO        396
+##  9 UA      JFK    SFO        395
+## 10 UA      JFK    SFO        394
+## # … with 4,524 more rows</code></pre>
+<p>Here we can see the longest United Airlines flight from JFK is to San Francisco.</p>
+<p>Hopefully this post helped you better understand the power of the dplyr package and it’s corresponding functions in R. All of the above information was learned at Weill Cornell Medical College in the courses Data Science I and Biostatistics I.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
