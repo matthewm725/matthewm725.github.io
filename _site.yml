@@ -12,6 +12,6 @@ navbar:
     - icon: fa-twitter fa-lg
       href: https://twitter.com/MandeliMatthew
     - icon: fa-linkedin fa-lg
-    - href: https://www.linkedin.com/in/matthew-mandeli-074192133
+      href: https://www.linkedin.com/in/matthew-mandeli-074192133
 output:
   html_document
